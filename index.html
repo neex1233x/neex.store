@@ -2,11 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="NEEX - علامة تجارية للأزياء. اكتشف تشكيلاتنا من تيشرتات صيفية وهوديات شتوية.">
   <meta name="keywords" content="أزياء, ملابس, تيشرتات, هوديات, موضة, NEEX">
   <meta name="author" content="NEEX Store">
-  <title>NEEX | أزياء</title>
+  <title>NEEX | brand</title>
   <link rel="icon" href="https://i.postimg.cc/VLMy3G1C/Whats-App-Image-2025-01-30-at-16-57-00.jpg" type="image/jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -32,6 +32,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Tajawal', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -44,13 +45,14 @@
         radial-gradient(circle at 15% 50%, rgba(180, 180, 200, 0.1) 0%, transparent 20%),
         radial-gradient(circle at 85% 30%, rgba(180, 180, 200, 0.1) 0%, transparent 20%);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     /* Header Styles */
     header {
       background-color: rgba(10, 10, 10, 0.95);
       color: var(--secondary);
-      padding: 1rem;
+      padding: 0.8rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -59,6 +61,7 @@
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(192, 192, 192, 0.2);
+      width: 100%;
     }
 
     .logo-container {
@@ -74,7 +77,7 @@
 
     .brand-name {
       font-weight: 800;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: var(--secondary);
       letter-spacing: -1px;
       text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
@@ -105,13 +108,13 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.8rem;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 1rem;
+      gap: 0.8rem;
       margin: 0;
       padding: 0;
     }
@@ -127,7 +130,7 @@
       transition: var(--transition);
       padding: 0.5rem 0;
       position: relative;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     .nav-links a:hover {
@@ -152,7 +155,7 @@
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.6rem;
     }
 
     /* Mobile Menu */
@@ -161,18 +164,18 @@
       background: none;
       border: none;
       color: var(--accent);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       cursor: pointer;
       transition: var(--transition);
       z-index: 1001;
-      padding: 0.5rem;
+      padding: 0.4rem;
     }
 
     .mobile-menu {
       position: fixed;
       top: 0;
       right: -100%;
-      width: 80%;
+      width: 100%;
       max-width: 300px;
       height: 100%;
       background: rgba(10, 10, 10, 0.98);
@@ -238,10 +241,10 @@
       background: transparent;
       color: var(--secondary);
       border: none;
-      padding: 0.2rem 0.6rem;
+      padding: 0.2rem 0.5rem;
       cursor: pointer;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       transition: var(--transition);
     }
 
@@ -257,7 +260,7 @@
     /* Cart Icon */
     .cart-icon {
       color: var(--secondary);
-      font-size: 1.1rem;
+      font-size: 1rem;
       position: relative;
       display: flex;
       align-items: center;
@@ -354,7 +357,7 @@
       display: inline-block;
       background: var(--accent);
       color: var(--primary);
-      padding: 0.8rem 2rem;
+      padding: 0.9rem 2.2rem;
       border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
@@ -393,13 +396,13 @@
 
     .section-title {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
       position: relative;
       display: inline-block;
       left: 50%;
       transform: translateX(-50%);
-      padding-bottom: 10px;
+      padding-bottom: 12px;
       color: var(--accent-secondary);
     }
 
@@ -415,65 +418,28 @@
     }
 
     /* Products Section */
-    .tabs {
+    .products-container {
       display: flex;
-      justify-content: center;
-      gap: 0.8rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .tab-btn {
-      padding: 0.7rem 1.5rem;
-      background: transparent;
-      color: var(--accent-secondary);
-      border: 1px solid var(--accent);
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: var(--transition);
-      font-size: 1rem;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .tab-btn.active {
-      background: var(--accent);
-      color: var(--primary);
-    }
-
-    .tab-btn:hover {
-      color: var(--primary);
-      background: var(--accent);
+      flex-direction: column;
+      gap: 2rem;
     }
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .collection {
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-
-    .collection.active {
-      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
     }
 
     /* About Section */
     .about-content {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.8rem;
       max-width: 1000px;
       margin: 0 auto;
       background: rgba(26, 26, 26, 0.7);
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: var(--border-radius);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(192, 192, 192, 0.1);
@@ -488,45 +454,45 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1.8rem;
     }
 
     .team-member {
       background: rgba(20, 20, 20, 0.8);
       border-radius: var(--border-radius);
-      padding: 1.2rem;
+      padding: 1.5rem;
       text-align: center;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: var(--transition);
       border: 1px solid rgba(192, 192, 192, 0.1);
     }
 
     .team-member:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
     .member-img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto 1rem;
-      border: 2px solid var(--accent);
+      margin: 0 auto 1.2rem;
+      border: 3px solid var(--accent);
     }
 
     .member-name {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
       color: var(--accent-secondary);
     }
 
     .member-role {
       color: var(--accent);
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     /* Contact Section */
@@ -541,9 +507,9 @@
 
     .contact-info {
       flex: 1;
-      min-width: 280px;
+      min-width: 300px;
       background: rgba(26, 26, 26, 0.7);
-      padding: 1.5rem;
+      padding: 1.8rem;
       border-radius: var(--border-radius);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(192, 192, 192, 0.1);
@@ -551,25 +517,25 @@
     }
 
     .contact-info h3 {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
       color: var(--accent-secondary);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       text-align: center;
     }
 
     .contact-details {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: 1.5rem;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 1rem;
       color: var(--accent-secondary);
       transition: var(--transition);
-      padding: 0.8rem;
+      padding: 1rem;
       border-radius: var(--border-radius);
       background: rgba(20, 20, 20, 0.5);
       text-decoration: none;
@@ -582,9 +548,9 @@
     }
 
     .contact-icon {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: var(--accent);
-      min-width: 35px;
+      min-width: 40px;
       text-align: center;
     }
 
@@ -597,93 +563,111 @@
       text-decoration: none;
     }
 
-    /* Product Card */
+    /* Product Card - Updated Design */
     .product-card {
-      background: rgba(26, 26, 26, 0.8);
+      background: rgba(26, 26, 26, 0.85);
       border-radius: var(--border-radius);
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
       transition: var(--transition);
       position: relative;
       transform: translateY(0);
-      border: 1px solid rgba(192, 192, 192, 0.1);
+      border: 1px solid rgba(192, 192, 192, 0.15);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
     }
 
     .product-badge {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 12px;
+      right: 12px;
       background: var(--accent);
       color: var(--primary);
-      padding: 0.2rem 0.8rem;
+      padding: 0.3rem 1rem;
       border-radius: 20px;
-      font-size: 0.7rem;
+      font-size: 0.85rem;
       font-weight: bold;
       z-index: 1;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .best_seller {
+      background: #ff5252;
+    }
+
+    .new {
+      background: #25d366;
     }
 
     .winter-badge {
-      background: var(--accent-tertiary);
+      background: #4fc3f7;
+    }
+
+    .product-img-container {
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      background: #1a1a1a;
     }
 
     .product-img {
-      height: 250px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .product-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
 
-    .product-card:hover .product-img img {
-      transform: scale(1.05);
+    .product-card:hover .product-img {
+      transform: scale(1.08);
     }
 
     .product-info {
-      padding: 1.2rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .product-title {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
       color: var(--accent-secondary);
+      line-height: 1.3;
     }
 
     .product-price {
       font-weight: bold;
       color: var(--accent);
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
     }
 
     .product-actions {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.8rem;
+      margin-top: auto;
     }
 
     .add-to-cart, .view-details {
-      padding: 0.6rem;
+      padding: 0.8rem;
       border: none;
       border-radius: var(--border-radius);
       cursor: pointer;
       flex: 1;
       transition: var(--transition);
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.3rem;
+      gap: 0.5rem;
     }
 
     .add-to-cart {
@@ -702,11 +686,11 @@
     .view-details {
       background: transparent;
       color: var(--accent-secondary);
-      border: 1px solid var(--accent);
+      border: 2px solid var(--accent);
     }
 
     .view-details:hover {
-      background: rgba(192, 192, 192, 0.1);
+      background: rgba(192, 192, 192, 0.15);
     }
 
     /* Cart Sidebar */
@@ -715,13 +699,13 @@
       top: 0;
       right: -100%;
       width: 90%;
-      max-width: 350px;
+      max-width: 380px;
       height: 100%;
       background: rgba(10, 10, 10, 0.98);
       z-index: 1000;
       transition: var(--transition);
       overflow-y: auto;
-      padding: 1.5rem;
+      padding: 1.8rem;
       border-left: 1px solid rgba(192, 192, 192, 0.2);
     }
 
@@ -733,8 +717,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.2rem;
       border-bottom: 1px solid rgba(192, 192, 192, 0.2);
     }
 
@@ -742,28 +726,28 @@
       background: none;
       border: none;
       color: var(--accent-secondary);
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       cursor: pointer;
-      padding: 0.3rem;
+      padding: 0.5rem;
     }
 
     .cart-items {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
-      margin-bottom: 1.5rem;
+      gap: 1.5rem;
+      margin-bottom: 1.8rem;
     }
 
     .cart-item {
       display: flex;
-      gap: 0.8rem;
-      padding-bottom: 1.2rem;
-      border-bottom: 1px solid rgba(192, 192, 192, 0.1);
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(192, 192, 192, 0.15);
     }
 
     .cart-item-img {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       object-fit: cover;
       border-radius: var(--border-radius);
     }
@@ -773,34 +757,34 @@
     }
 
     .cart-item-title {
-      font-size: 1rem;
-      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
       color: var(--accent-secondary);
     }
 
     .cart-item-price {
       color: var(--accent);
       font-weight: bold;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
     }
 
     .cart-item-actions {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.8rem;
     }
 
     .quantity-control {
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.5rem;
     }
 
     .quantity-btn {
-      width: 25px;
-      height: 25px;
-      background: rgba(192, 192, 192, 0.1);
+      width: 30px;
+      height: 30px;
+      background: rgba(192, 192, 192, 0.15);
       border: none;
       border-radius: 50%;
       color: var(--accent-secondary);
@@ -808,7 +792,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      transition: all 0.2s ease;
     }
 
     .quantity-btn:hover {
@@ -821,20 +806,25 @@
       border: none;
       color: var(--error);
       cursor: pointer;
-      font-size: 0.8rem;
-      padding: 0.2rem;
+      font-size: 0.9rem;
+      padding: 0.3rem;
+      transition: color 0.2s ease;
+    }
+
+    .remove-item:hover {
+      color: #ff2222;
     }
 
     .cart-summary {
       border-top: 1px solid rgba(192, 192, 192, 0.2);
-      padding-top: 1.2rem;
+      padding-top: 1.5rem;
     }
 
     .cart-total {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
     }
 
     .cart-total-label {
@@ -849,7 +839,7 @@
     .checkout-btn {
       display: block;
       width: 100%;
-      padding: 0.8rem;
+      padding: 1rem;
       background: var(--accent);
       color: var(--primary);
       border: none;
@@ -857,18 +847,21 @@
       font-weight: bold;
       cursor: pointer;
       transition: var(--transition);
-      font-size: 1rem;
+      font-size: 1.1rem;
       text-align: center;
+      box-shadow: 0 3px 10px rgba(192, 192, 192, 0.3);
     }
 
     .checkout-btn:hover {
       background: var(--accent-secondary);
+      transform: translateY(-3px);
     }
 
     .empty-cart {
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
       color: var(--accent-secondary);
+      font-size: 1.1rem;
     }
 
     /* Product Modal */
@@ -878,7 +871,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.95);
       z-index: 2000;
       display: flex;
       justify-content: center;
@@ -904,13 +897,14 @@
       display: flex;
       flex-direction: column;
       border: 1px solid rgba(192, 192, 192, 0.2);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     }
 
     .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
+      padding: 1.2rem;
       background: rgba(20, 20, 20, 0.8);
       border-bottom: 1px solid rgba(192, 192, 192, 0.1);
     }
@@ -919,9 +913,14 @@
       background: none;
       border: none;
       color: var(--accent-secondary);
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       cursor: pointer;
-      padding: 0.3rem;
+      padding: 0.5rem;
+      transition: color 0.2s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--accent);
     }
 
     .modal-body {
@@ -932,43 +931,48 @@
 
     .product-gallery {
       flex: 1;
-      min-width: 280px;
-      padding: 1.5rem;
+      min-width: 300px;
+      padding: 1.8rem;
     }
 
     .main-image {
-      height: 350px;
+      height: 380px;
       border-radius: var(--border-radius);
       overflow: hidden;
       background: rgba(20, 20, 20, 0.5);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .main-image img {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
     }
 
     .thumbnails {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.8rem;
       overflow-x: auto;
-      padding: 0.5rem 0;
+      padding: 0.8rem 0;
     }
 
     .thumbnail {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       border-radius: var(--border-radius);
       overflow: hidden;
       cursor: pointer;
-      border: 1px solid transparent;
+      border: 2px solid transparent;
       flex-shrink: 0;
+      transition: all 0.2s ease;
     }
 
     .thumbnail:hover, .thumbnail.active {
       border-color: var(--accent);
+      transform: scale(1.05);
     }
 
     .thumbnail img {
@@ -979,104 +983,108 @@
 
     .product-details {
       flex: 1;
-      min-width: 280px;
-      padding: 1.5rem;
+      min-width: 300px;
+      padding: 1.8rem;
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-      background: rgba(20, 20, 20, 0.5);
+      gap: 1.2rem;
+      background: rgba(20, 20, 20, 0.6);
     }
 
     .modal-product-title {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       color: var(--accent-secondary);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
     }
 
     .modal-product-price {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: var(--accent);
       font-weight: bold;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
 
     .modal-product-description {
       color: var(--accent-secondary);
       line-height: 1.7;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
     }
 
     .modal-product-actions {
       display: flex;
-      gap: 0.8rem;
+      gap: 1rem;
       margin-top: auto;
     }
 
     /* WhatsApp Button */
     .whatsapp-btn {
       position: fixed;
-      bottom: 20px;
-      left: 20px;
+      bottom: 25px;
+      left: 25px;
       z-index: 99;
       background: #25D366;
       color: white;
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+      font-size: 1.8rem;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
       transition: var(--transition);
       text-decoration: none;
+      animation: pulse 2s infinite;
     }
 
     .whatsapp-btn:hover {
       transform: scale(1.1);
+      box-shadow: 0 7px 20px rgba(37, 211, 102, 0.6);
     }
 
     /* Footer */
     footer {
       background: #080808;
       color: var(--secondary);
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
       margin-top: auto;
-      border-top: 1px solid rgba(192, 192, 192, 0.1);
+      border-top: 1px solid rgba(192, 192, 192, 0.15);
     }
 
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 1.2rem;
-      margin-bottom: 1.2rem;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .social-icons a {
       color: var(--accent-secondary);
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       transition: var(--transition);
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      border: 1px solid rgba(192, 192, 192, 0.2);
+      border: 1px solid rgba(192, 192, 192, 0.25);
       text-decoration: none;
     }
 
     .social-icons a:hover {
       color: var(--accent);
       border-color: var(--accent);
+      transform: translateY(-3px);
     }
 
     .copyright {
       color: var(--accent-secondary);
-      font-size: 0.8rem;
-      opacity: 0.7;
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
 
     /* Overlay */
@@ -1086,7 +1094,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       z-index: 999;
       opacity: 0;
       visibility: hidden;
@@ -1096,6 +1104,40 @@
     .overlay.active {
       opacity: 1;
       visibility: visible;
+    }
+
+    /* Loading spinner */
+    .loader {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: var(--accent);
+    }
+    
+    .loader.active {
+      display: flex;
+    }
+    
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid rgba(192, 192, 192, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--accent);
+      animation: spin 1s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
 
     /* Animations */
@@ -1112,9 +1154,15 @@
 
     @keyframes dance {
       0%, 100% { transform: translateY(0) rotate(0); }
-      25% { transform: translateY(-3px) rotate(3deg); }
+      25% { transform: translateY(-5px) rotate(3deg); }
       50% { transform: translateY(0) rotate(0); }
-      75% { transform: translateY(-3px) rotate(-3deg); }
+      75% { transform: translateY(-5px) rotate(-3deg); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
     .dance {
@@ -1128,7 +1176,7 @@
       }
       
       .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       }
       
       .nav-links {
@@ -1138,20 +1186,24 @@
       .mobile-menu-btn {
         display: block;
       }
+      
+      .section-title {
+        font-size: 2rem;
+      }
     }
 
     @media (max-width: 768px) {
       .hero {
-        height: 50vh;
-        min-height: 400px;
+        height: 55vh;
+        min-height: 450px;
       }
       
       .quote-text {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
       
       .brand-name {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
       
       .section-title {
@@ -1167,7 +1219,11 @@
       }
       
       .main-image {
-        height: 250px;
+        height: 280px;
+      }
+      
+      .product-img-container {
+        height: 280px;
       }
     }
 
@@ -1177,31 +1233,21 @@
       }
       
       .hero {
-        height: 45vh;
-        min-height: 350px;
+        height: 50vh;
+        min-height: 400px;
       }
       
       .quote-text {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
       
       .hero-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       
       .btn {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
-      }
-      
-      .tabs {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .tab-btn {
-        width: 100%;
-        max-width: 220px;
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
       }
       
       .language-switcher {
@@ -1227,11 +1273,94 @@
       }
       
       .whatsapp-btn {
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        left: 20px;
+      }
+      
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+      }
+      
+      .product-img-container {
+        height: 260px;
+      }
+      
+      .product-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      
+      .product-actions button {
+        width: 100%;
+      }
+      
+      .section-title {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      .brand-name {
         font-size: 1.3rem;
-        bottom: 15px;
-        left: 15px;
+      }
+      
+      .cart-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+      
+      .cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 0.7rem;
+      }
+      
+      .mobile-menu-btn {
+        font-size: 1.3rem;
+      }
+      
+      .hero {
+        min-height: 380px;
+        height: 45vh;
+      }
+      
+      .quote-text {
+        font-size: 1.2rem;
+      }
+      
+      .quote-container {
+        padding: 1.2rem;
+      }
+      
+      .hero-content p {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.6rem;
+      }
+      
+      .main-image {
+        height: 240px;
+      }
+      
+      .thumbnail {
+        width: 70px;
+        height: 70px;
+      }
+      
+      .modal-product-title {
+        font-size: 1.4rem;
+      }
+      
+      .modal-product-price {
+        font-size: 1.3rem;
       }
     }
   </style>
@@ -1241,6 +1370,12 @@
   <a href="https://wa.me/+212782738492" class="whatsapp-btn" target="_blank" aria-label="تواصل معنا عبر واتساب">
     <i class="fab fa-whatsapp"></i>
   </a>
+  
+  <!-- Loading Spinner -->
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>جاري التحميل...</p>
+  </div>
 
   <!-- Header -->
   <header>
@@ -1354,15 +1489,13 @@
     </div>
   </section>
   
-    <div class="collection active" id="summer-collection">
-      <div class="products-grid">
-        <!-- Summer products will be loaded by JavaScript -->
-      </div>
-    </div>
+  <!-- Products Section -->
+  <section class="section" id="products-section">
+    <h2 class="section-title" data-i18n="our_products">تشكيلات تيشرتات NEEX</h2>
     
-    <div class="collection" id="winter-collection">
+    <div class="products-container">
       <div class="products-grid">
-        <!-- Winter products will be loaded by JavaScript -->
+        <!-- Products will be loaded by JavaScript -->
       </div>
     </div>
   </section>
@@ -1376,6 +1509,26 @@
         نيكس هي علامة تجارية تأسست في المغرب عام 2023، تهدف إلى تقديم أزياء عصرية بجودة عالية. 
         نحن نؤمن بأن الموضة ليست مجرد ملابس، بل هي قصة تعبر عن هوية الفرد وشخصيته. 
         تتميز منتجاتنا بالتصميم الفريد والمواد عالية الجودة والاهتمام بأدق التفاصيل.
+      </p>
+      
+      <h3 data-i18n="our_team">فريقنا</h3>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://i.postimg.cc/4x0VQbNp/avatar1.jpg" alt="عمر" class="member-img">
+          <h4 class="member-name">عمر</h4>
+          <p class="member-role" data-i18n="designer">مصمم أزياء</p>
+        </div>
+        <div class="team-member">
+          <img src="https://i.postimg.cc/1XkfL5Jd/avatar2.jpg" alt="سارة" class="member-img">
+          <h4 class="member-name">سارة</h4>
+          <p class="member-role" data-i18n="marketing">مديرة تسويق</p>
+        </div>
+        <div class="team-member">
+          <img src="https://i.postimg.cc/3rYq0B6X/avatar3.jpg" alt="يوسف" class="member-img">
+          <h4 class="member-name">يوسف</h4>
+          <p class="member-role" data-i18n="production">مدير إنتاج</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1436,280 +1589,246 @@
 
   <script>
     // بيانات المنتجات مع تفاصيل إضافية للعرض في المودال
-    const products = {
-      summer: [
-        {
-          id: 1,
-          title: "SKULL CRAZE",
-          title_fr: "SKULL CRAZE",
-          title_en: "SKULL CRAZE",
-          price: 200,
-          image: "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
-          images: [
-            "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
-            "https://i.postimg.cc/zBCzCnJs/Picsart-25-06-17-13-14-21-694.jpg", 
-            "https://i.postimg.cc/SxRxB2r9/Picsart-25-06-17-13-16-08-473.jpg",
-            "https://i.postimg.cc/ZRGfSdp5/Picsart-25-06-17-13-12-20-974.jpg",
-            "https://i.postimg.cc/cJ3JHJMr/Picsart-25-06-17-13-09-00-801.jpg",
-          ],
-          description: "قميص NEEX بلمسة فنية تجمع بين الغموض والإبداع، مصنوع من قطن عالي الجودة ومريح في اللبس. تصميم الجمجمة بالألوان الجريئة يعطيك ستايل فريد وعصري، مثالي للخروجات ولإبراز شخصيتك المختلفة. متوفر بمقاسات متنوعة",
-          description_fr: "T-shirt NEEX avec une touche artistique alliant mystère et créativité, fabriqué en coton de haute qualité et confortable à porter. Le design du crâne avec des couleurs audacieuses vous donne un style unique et moderne, idéal pour les sorties et pour exprimer votre personnalité différente. Disponible en plusieurs tailles",
-          description_en: "The NEEX t-shirt features an artistic touch that blends mystery and creativity. Made from high-quality cotton, it offers both comfort and style. The bold skull design adds a unique and modern flair, perfect for outings and expressing your individuality. Available in various sizes",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "new"
-        },
-        {
-          id: 2,
-          title: "NEEX FLOW",
-          title_fr: "NEEX FLOW",
-          title_en: "NEEX FLOW",
-          price: 180,
-          image: "https://i.postimg.cc/43xrL2nZ/Picsart-25-06-23-12-38-03-430.jpg",
-          images: [
-            "https://i.postimg.cc/43xrL2nZ/Picsart-25-06-23-12-38-03-430.jpg",
-            "https://i.postimg.cc/9MMC9Fyd/Picsart-25-06-23-12-34-16-009.jpg",
-            "https://i.postimg.cc/sgqNmfFP/Picsart-25-06-23-12-32-33-449.jpg",
-            "https://i.postimg.cc/hGCbspQk/Picsart-25-06-23-12-30-48-316.jpg",
-            "https://i.postimg.cc/zXjLT3gM/Picsart-25-06-23-12-30-04-955.jpg",
-          ],
-          description: "قميص NEEX بلمسة زخرفية فريدة في الشعار، تصميم بسيط وأنيق يعطيك إطلالة شبابية وعصرية. مصنوع من قطن مريح وعالي الجودة، مناسب لكل الأوقات والمناسبات. متوفر بألوان ومقاسات متنوعة.",
-          description_fr: "T-shirt NEEX avec une touche décorative unique dans le logo, un design simple et élégant qui vous donne une apparence jeune et moderne. Fabriqué en coton confortable et de haute qualité, adapté à toutes les occasions. Disponible en plusieurs couleurs et tailles.",
-          description_en: "This NEEX t-shirt features a unique, artistic logo design that adds a stylish and youthful vibe. Crafted from high-quality cotton for maximum comfort, it's the perfect choice for any occasion. Available in multiple colors and sizes.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "best_seller"
-        },
-        {
-          id: 3,
-          title: "NEEX SPLIT CODE",
-          title_fr: "NEEX SPLIT CODE",
-          title_en: "NEEX SPLIT CODE",
-          price: 180,
-          image: "https://i.postimg.cc/LXwWCHZF/Picsart-25-06-23-17-04-44-108.jpg",
-          images: [
-            "https://i.postimg.cc/LXwWCHZF/Picsart-25-06-23-17-04-44-108.jpg",
-            "https://i.postimg.cc/prQBfxfZ/Picsart-25-06-23-17-04-04-647.jpg",
-            "https://i.postimg.cc/tJDxRgdL/Picsart-25-06-23-17-03-24-026.jpg",
-            "https://i.postimg.cc/9QwrKbS3/Picsart-25-06-23-17-02-33-569.jpg",
-            "https://i.postimg.cc/v8S8y95G/Picsart-25-06-23-17-01-41-385.jpg",
-            "https://i.postimg.cc/DyXhKN2c/Picsart-25-06-23-17-00-44-838.jpg",
-            "https://i.postimg.cc/wvMK4ffL/Picsart-25-06-23-16-59-55-325.jpg",
-            "https://i.postimg.cc/nhxhSxvm/Picsart-25-06-23-16-58-53-503.jpg",
-            "https://i.postimg.cc/3x33CBTC/Picsart-25-06-23-16-57-50-686.jpg",
-          ],
-          description: "تيشرت بستايل الشارع الجريء، مع شعار NEEX بحروف كبيرة وواضحة تمنحك مظهر قوي ولافت. اللون الأصفر المشرق يضيف طاقة وجرأة لإطلالتك. مصنوع من قطن ناعم ومتين، مثالي للارتداء اليومي أو المناسبات الكاجوال. متوفر بعدة ألوان ومقاسات.",
-          description_fr: "T-shirt au style streetwear audacieux, avec le logo NEEX en grandes lettres claires qui vous donne une apparence forte et accrocheuse. La couleur jaune vif ajoute de l'énergie et de l'audace à votre look. Fabriqué en coton doux et résistant, idéal pour un usage quotidien ou des occasions décontractées. Disponible en plusieurs couleurs et tailles.",
-          description_en: "A bold streetwear-inspired t-shirt featuring the NEEX logo in large, standout letters. The bright yellow color adds energy and confidence to your look. Made from soft, durable cotton—perfect for everyday wear or casual occasions. Available in various colors and sizes.",
-          sizes: ["M", "L", "XL", "XXL"]
-        },
-        {
-          id: 4,
-          title: "NEEX REAPER",
-          title_fr: "NEEX REAPER",
-          title_en: "NEEX REAPER",
-          price: 200,
-          image: "https://i.postimg.cc/Kz5YcK7x/IMG-20250624-191049.jpg",
-          images: [ 
-            "https://i.postimg.cc/Kz5YcK7x/IMG-20250624-191049.jpg",
-            "https://i.postimg.cc/6QgP7z0h/IMG-20250624-191013.jpg",
-            "https://i.postimg.cc/qq0jnFC2/Picsart-25-06-17-13-27-54-341.jpg",
-            "https://i.postimg.cc/bwMgLrty/Picsart-25-06-17-13-26-03-480.jpg",                                            
-            "https://i.postimg.cc/JnRkQCP7/Picsart-25-06-17-13-22-06-892.jpg",
-            "https://i.postimg.cc/fyrSZtZk/Picsart-25-06-17-13-20-06-005.jpg",
-          ],
-          description: "اكتشف جرأة التصميم مع هذا التيشرت الفريد من NEEX. جمجمة ذائبة بألوان صفراء تمنحك مظهراً لا يُنسى، وتعبّر عن شخصية متمرّدة وعاشقة للفن والشارع. التيشرت مصنوع من قطن ناعم ومتين، مناسب للإطلالات اليومية ولمن يبحث عن التميز والاختلاف. متوفر بعدة مقاسات",
-          description_fr: "Découvrez l'audace du design avec ce t-shirt unique de NEEX. Un crâne fondu avec des couleurs jaunes vous donne un look inoubliable et exprime une personnalité rebelle et amoureuse de l'art et de la rue. Le t-shirt est fabriqué en coton doux et résistant, adapté aux tenues quotidiennes et pour ceux qui recherchent l'exclusivité et la différence. Disponible en plusieurs tailles",
-          description_en: "Unleash bold energy with this standout NEEX T-shirt. Featuring a melting yellow skull design, it captures the spirit of rebellion and street art. Made from soft and durable cotton, it's the perfect piece for daily wear and for those who dare to be different. Available in multiple sizes.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "new"
-        },
-        {
-          id: 5,
-          title: "NEEX ECHO",
-          title_fr: "NEEX ECHO",
-          title_en: "NEEX ECHO",
-          price: 180,
-          image: "https://i.postimg.cc/BQ4zhZhH/Picsart-25-06-23-15-44-41-944.jpg",
-          images: [
-            "https://i.postimg.cc/BQ4zhZhH/Picsart-25-06-23-15-44-41-944.jpg",
-            "https://i.postimg.cc/SRqgtVGk/Picsart-25-06-23-15-43-39-029.jpg",
-            "https://i.postimg.cc/SQvXdjQt/Picsart-25-06-23-15-42-49-242.jpg",
-            "https://i.postimg.cc/8ztsFCYH/Picsart-25-06-23-15-41-53-083.jpg",
-            "https://i.postimg.cc/Gm5dwTNZ/Picsart-25-06-23-15-40-12-418.jpg",
-            "https://i.postimg.cc/ZRLQm1nC/Picsart-25-06-23-12-45-45-886.jpg",
-          ],
-          description: "تيشرت NEEX ECHO يجمع بين البساطة والجرأة بتصميم يكرر شعار NEEX بشكل إيقاعي عصري. الألوان المتعددة تضيف لمسة حيوية، والخامة القطنية الخفيفة تمنحك راحة مثالية خلال الصيف أو في خروجاتك اليومية. إذا كنت من عشاق التميز والبساطة الجذابة، فـ ECHO هو اختيارك. مقاس واحد يناسب الجميع",
-          description_fr: "Le t-shirt NEEX ECHO allie simplicité et audace avec un design qui répète le logo NEEX de manière rythmique et moderne. Les multiples couleurs ajoutent une touche dynamique, et le tissu en coton léger vous offre un confort optimal pendant l'été ou vos sorties quotidiennes. Si vous aimez l'exclusivité et la simplicité attrayante, ECHO est votre choix. Une taille unique pour tous",
-          description_en: "The NEEX ECHO T-shirt brings together simplicity and boldness with a rhythmic repetition of the NEEX logo. Available in multiple vibrant colors, its lightweight cotton fabric ensures ultimate comfort for summer days or casual outings. If you're into standout minimalism — ECHO is made for you. One size fits all",
-          sizes: ["M", "L", "XL"]
-        },
-        {
-          id: 6,
-          title: "NEEX ECHO // BLACKOUT",
-          title_fr: "NEEX ECHO // BLACKOUT",
-          title_en: "NEEX ECHO // BLACKOUT",
-          price: 180,
-          image: "https://i.postimg.cc/VLD9Bzr7/Picsart-25-06-21-09-50-26-576.jpg",
-          images: [
-            "https://i.postimg.cc/VLD9Bzr7/Picsart-25-06-21-09-50-26-576.jpg",
-            "https://i.postimg.cc/T18xs8KF/Picsart-25-06-22-15-51-10-810.jpg",
-            "https://i.postimg.cc/W3LfLs7G/Picsart-25-06-22-15-49-49-843.jpg",
-            "https://i.postimg.cc/JzsTss63/Picsart-25-06-22-15-48-38-644.jpg",
-            "https://i.postimg.cc/gkJs7wW9/Picsart-25-06-21-09-49-36-668.jpg",         
-          ],
-          description: "نسخة سوداء أنيقة من تيشرت NEEX ECHO، تجمع بين التكرار الجريء للشعار ولون أسود يوحي بالقوة والغموض. تصميم عصري ومميز لعشاق الإطلالة الجادة والمتمردة. مصنوع من قطن مريح وخفيف، مثالي للارتداء اليومي أو للخروجات الليلية بأسلوب عصري. متوفر بمقاسات مختلفة.",
-          description_fr: "Version noire élégante du t-shirt NEEX ECHO, alliant la répétition audacieuse du logo et une couleur noire évoquant la puissance et le mystère. Un design moderne et distinctif pour les amateurs de looks sérieux et rebelles. Fabriqué en coton confortable et léger, idéal pour un usage quotidien ou des sorties nocturnes avec un style moderne. Disponible en différentes tailles.",
-          description_en: "The boldest version of NEEX ECHO yet. This BLACKOUT edition brings the iconic repeated logo to life in a sleek, all-black design — where silence meets power. Perfect for those who prefer a darker, edgier vibe. Crafted from soft, breathable cotton for everyday comfort. Available in multiple sizes.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "best_seller"
-        }
-      ],
-      winter: [
-        {
-          id: 7,
-          title: "NEEX VENOM SMILE",
-          title_fr: "NEEX VENOM SMILE",
-          title_en: "NEEX VENOM SMILE",
-          price: 200,
-          image: "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
-          images: [
-            "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
-            "https://i.postimg.cc/zBCzCnJs/Picsart-25-06-17-13-14-21-694.jpg",
-            "https://i.postimg.cc/SxRxB2r9/Picsart-25-06-17-13-16-08-473.jpg",
-            "https://i.postimg.cc/HnNjgK5b/Picsart-25-06-17-13-09-00-801-1.jpg",
-            "https://i.postimg.cc/CMRqvHbb/Picsart-25-06-17-13-11-30-521.jpg",
-          ],
-          description: "قميص قطني ناعم بتصميم فني جريء يجمع بين الابتسامة والجمجمة، مثالي لعشاق التميز وستايل الشارع.",
-          description_fr: "T-shirt en coton doux avec un design artistique audacieux combinant un sourire et un crâne, idéal pour les amateurs de style unique et streetwear.",
-          description_en: "Soft cotton tee with a bold graphic mixing a smiley and skull — perfect for streetwear lovers and those who stand out.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "winter"
-        },
-        {
-          id: 8,
-          title: "NEEX TOXIC HEAT",
-          title_fr: "NEEX TOXIC HEAT",
-          title_en: "NEEX TOXIC HEAT",
-          price: 200,
-          image: "https://i.postimg.cc/P5tJcQ1K/IMG-20250624-190813.jpg",
-          images: [    
-            "https://i.postimg.cc/P5tJcQ1K/IMG-20250624-190813.jpg",
-            "https://i.postimg.cc/rwQsLRJT/IMG-20250624-190741.jpg",
-            "https://i.postimg.cc/PJWfVCxB/Picsart-25-06-16-20-27-02-186.jpg",
-            "https://i.postimg.cc/Kv5vn3CT/Picsart-25-06-16-20-27-46-123.jpg",
-            "https://i.postimg.cc/HksW3sCh/Picsart-25-06-16-20-23-37-397.jpg",
-            "https://i.postimg.cc/QC3h7jbS/Picsart-25-06-16-20-19-45-121.jpg",
-          ],
-          description: "قميص قطني رائع، مع لوحة فنية عبارة عن لهب ذائب يحمل توقيع NEEX.مثالي لكل من يعشق التميز والانفجار الهادئ للأناقة",
-          description_fr: "Magnifique t-shirt en coton, avec une œuvre d'art représentant une flamme fondue portant la signature NEEX. Idéal pour ceux qui aiment l'exclusivité et l'explosion silencieuse de l'élégance",
-          description_en: "A premium cotton tee featuring a stunning artwork — melting flames signed by NEEX.Perfect for those who love bold style with quiet intensity.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "winter"
-        },
-        {
-          id: 9,
-          title: "FROST KING",
-          title_fr: "NEEX FROST KING",
-          title_en: "NEEX FROST KING",
-          price: 200,
-          image: "https://i.postimg.cc/hGWXgBLK/IMG-20250624-224239.jpg",
-          images: [
-            "https://i.postimg.cc/hGWXgBLK/IMG-20250624-224239.jpg",
-            "https://i.postimg.cc/3xpwtcPV/Picsart-25-06-14-12-13-21-942.jpg",
-            "https://i.postimg.cc/ZRfY9tdB/Picsart-25-06-14-12-14-48-228.jpg",
-            "https://i.postimg.cc/vmYd52MW/Picsart-25-06-14-12-15-51-074.jpg",
-            "https://i.postimg.cc/HnXp6JN5/Picsart-25-06-14-12-16-42-438.jpg",  
-            "https://i.postimg.cc/gjqCw35M/Picsart-25-06-14-12-52-15-272.jpg",
-            "https://i.postimg.cc/NfK8jQHX/Picsart-25-06-14-12-43-50-681.jpg",
-          ],
-          description: "قميص قطني أسود، عليه سانتا بحلّة محاربة وتوقيع NEEX.مش بهجة... هادي هيبة شتوية، لناس ما كيركعوش للروتي",
-          description_fr: "T-shirt en coton noir, avec un Santa en tenue de combat et la signature NEEX. Pas de joie... c'est une prestance hivernale, pour les gens qui ne s'agenouillent pas devant la routine",
-          description_en: "Black cotton tee with a warrior-style Santa and NEEX signature.Not just festive — it's winter dominance for those who don't kneel to routine.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "winter"
-        },
-        {
-          id: 10,
-          title: "NEEX FROST",
-          title_fr: "NEEX FROST",
-          title_en: "NEEX FROST",
-          price: 180,
-          image: "https://i.postimg.cc/mDhJwtDw/Picsart-25-06-23-15-52-03-996.jpg",
-          images: [
-            "https://i.postimg.cc/mDhJwtDw/Picsart-25-06-23-15-52-03-996.jpg",
-            "https://i.postimg.cc/V63GWg2f/Picsart-25-06-23-15-51-10-248.jpg",
-            "https://i.postimg.cc/CMq6xyfz/Picsart-25-06-23-15-48-31-018.jpg",
-            "https://i.postimg.cc/HsnTVkdT/Picsart-25-06-23-15-47-36-481.jpg",
-            "https://i.postimg.cc/GpFCZBJx/Picsart-25-06-23-15-46-30-594.jpg",
-          ],
-          description: "قميص قطني ناصع، بتوقيع NEEX الجليدي.تصميم نقي وبارد، كيحمل هيبة الصمت وهدوء الواثقين",
-          description_fr: "T-shirt en coton immaculé, avec la signature glacée de NEEX. Un design pur et froid, portant la prestance du silence et le calme des confiants",
-          description_en: "Crisp cotton tee with an icy NEEX signature.Clean, bold design — calm power for the confident.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "winter"
-        },
-        {
-          id: 11,
-          title: "NEEX SIGNAL",
-          title_fr: "NEEX SIGNAL",
-          title_en: "NEEX SIGNAL",
-          price: 180,
-          image: "https://i.postimg.cc/fyryJ3P0/IMG-20250624-191211.jpg",
-          images: [
-            "https://i.postimg.cc/fyryJ3P0/IMG-20250624-191211.jpg",
-            "https://i.postimg.cc/DwdhNJcd/IMG-20250624-191236.jpg",
-            "https://i.postimg.cc/Nf0cch3Z/Picsart-25-06-25-21-21-28-563.jpg",
-            "https://i.postimg.cc/28gXXPrQ/Picsart-25-06-25-21-20-46-015.jpg",
-            "https://i.postimg.cc/Hn9X48Yv/Picsart-25-06-25-21-19-40-246.jpg",
-            "https://i.postimg.cc/SKY91vQM/Picsart-25-06-25-21-18-57-195.jpg",
-          ],
-          description: "قميص قطني أنيق متوفر بألوان زاهية، مزين بشعار NEEX البارز بحال سينيال وسط الزحام، كيشعل أناقة ويأمر بالانتباه.",
-          description_fr: "T-shirt en coton élégant disponible en couleurs vives, orné du logo NEEX en relief comme un signal dans la foule, allumant l'élégance et exigeant l'attention.",
-          description_en: "A stylish cotton tee available in vibrant colors, featuring a bold NEEX logo – like a signal in the crowd, it radiates confidence and demands attention",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "winter"
-        },
-        {
-          id: 12,
-          title: "NEEX VISION",
-          title_fr: "NEEX VISION",
-          title_en: "NEEX VISION",
-          price: 180,
-          image: "https://i.postimg.cc/L6Vv0LWV/Picsart-25-06-25-12-33-13-698.jpg",
-          images: [ 
-            "https://i.postimg.cc/L6Vv0LWV/Picsart-25-06-25-12-33-13-698.jpg",
-            "https://i.postimg.cc/zf4kRjLq/Picsart-25-06-25-12-32-26-217.jpg",
-            "https://i.postimg.cc/zvrSxGSM/Picsart-25-06-25-12-31-39-940.jpg",
-            "https://i.postimg.cc/7P3NfSqy/Picsart-25-06-25-12-22-24-316.jpg",
-            "https://i.postimg.cc/8PwBbDFK/Picsart-25-06-25-12-17-56-146.jpg",
-          ],
-          description: "قميص قطني فاخر بتصميم عصري وشعار NEEX ثلاثي الأبعاد، متوفر بألوان متعددة تناسب كل الأذواق.",
-          description_fr: "T-shirt en coton luxueux avec un design moderne et le logo NEEX en 3D, disponible en plusieurs couleurs pour tous les goûts.",
-          description_en: "Premium cotton t-shirt with a bold 3D NEEX logo — available in multiple colors to match every style",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "winter"
-        },
-        {
-          id: 13,
-          title: "TOO OLD",
-          title_fr: "TOO OLD",
-          title_en: "TOO OLD",
-          price: 200,
-          image: "https://i.postimg.cc/CLddWVP6/Picsart-25-06-25-12-41-28-538.jpg",
-          images: [ 
-            "https://i.postimg.cc/CLddWVP6/Picsart-25-06-25-12-41-28-538.jpg",
-            "https://i.postimg.cc/BvCqjh7K/Picsart-25-06-25-12-36-40-294.jpg",
-            "https://i.postimg.cc/Z5tZVk1N/Picsart-25-06-25-12-50-28-774.jpg",
-            "https://i.postimg.cc/t4jJ7VR8/Picsart-25-06-25-12-51-34-147.jpg",
-            "https://i.postimg.cc/GmLRZPm3/Picsart-25-06-25-12-37-40-792.jpg",
-          ],
-          description: "قميص قطني بجودة عالية، مزين بعبارة تعبر عن القوة والموقف. تصميم عصري يلفت الانتباه ويعبّر عن شخصية لا تقبل التفاهة.",
-          description_fr: "T-shirt en coton de haute qualité, orné d'une phrase exprimant la force et l'attitude. Un design moderne qui attire l'attention et exprime une personnalité qui n'accepte pas la frivolité.",
-          description_en: "High-quality cotton tee with a bold phrase that speaks attitude. A modern design that turns heads and tells the world you've had enough.",
-          sizes: ["M", "L", "XL", "XXL"],
-          badge: "winter"
-        }
-      ]
-    };
+    const products = [
+      {
+        id: 1,
+        title: "SKULL CRAZE",
+        title_en: "SKULL CRAZE",
+        price: 200,
+        image: "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
+        images: [
+          "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
+          "https://i.postimg.cc/zBCzCnJs/Picsart-25-06-17-13-14-21-694.jpg", 
+          "https://i.postimg.cc/SxRxB2r9/Picsart-25-06-17-13-16-08-473.jpg",
+          "https://i.postimg.cc/ZRGfSdp5/Picsart-25-06-17-13-12-20-974.jpg",
+          "https://i.postimg.cc/cJ3JHJMr/Picsart-25-06-17-13-09-00-801.jpg",
+        ],
+        description: "قميص NEEX بلمسة فنية تجمع بين الغموض والإبداع، مصنوع من قطن عالي الجودة ومريح في اللبس. تصميم الجمجمة بالألوان الجريئة يعطيك ستايل فريد وعصري، مثالي للخروجات ولإبراز شخصيتك المختلفة. متوفر بمقاسات متنوعة",
+        description_en: "The NEEX t-shirt features an artistic touch that blends mystery and creativity. Made from high-quality cotton, it offers both comfort and style. The bold skull design adds a unique and modern flair, perfect for outings and expressing your individuality. Available in various sizes",
+        sizes: ["M", "L", "XL", "XXL"],
+        badge: "best_seller"
+      },
+      {
+        id: 2,
+        title: "NEEX FLOW",
+        title_en: "NEEX FLOW",
+        price: 180,
+        image: "https://i.postimg.cc/43xrL2nZ/Picsart-25-06-23-12-38-03-430.jpg",
+        images: [
+          "https://i.postimg.cc/43xrL2nZ/Picsart-25-06-23-12-38-03-430.jpg",
+          "https://i.postimg.cc/9MMC9Fyd/Picsart-25-06-23-12-34-16-009.jpg",
+          "https://i.postimg.cc/sgqNmfFP/Picsart-25-06-23-12-32-33-449.jpg",
+          "https://i.postimg.cc/hGCbspQk/Picsart-25-06-23-12-30-48-316.jpg",
+          "https://i.postimg.cc/zXjLT3gM/Picsart-25-06-23-12-30-04-955.jpg",
+        ],
+        description: "قميص NEEX بلمسة زخرفية فريدة في الشعار، تصميم بسيط وأنيق يعطيك إطلالة شبابية وعصرية. مصنوع من قطن مريح وعالي الجودة، مناسب لكل الأوقات والمناسبات. متوفر بألوان ومقاسات متنوعة.",
+        description_en: "This NEEX t-shirt features a unique, artistic logo design that adds a stylish and youthful vibe. Crafted from high-quality cotton for maximum comfort, it's the perfect choice for any occasion. Available in multiple colors and sizes.",
+        sizes: ["M", "L", "XL", "XXL"]
+      },
+      {
+        id: 3,
+        title: "NEEX SPLIT CODE",
+        title_en: "NEEX SPLIT CODE",
+        price: 180,
+        image: "https://i.postimg.cc/LXwWCHZF/Picsart-25-06-23-17-04-44-108.jpg",
+        images: [
+          "https://i.postimg.cc/LXwWCHZF/Picsart-25-06-23-17-04-44-108.jpg",
+          "https://i.postimg.cc/prQBfxfZ/Picsart-25-06-23-17-04-04-647.jpg",
+          "https://i.postimg.cc/tJDxRgdL/Picsart-25-06-23-17-03-24-026.jpg",
+          "https://i.postimg.cc/9QwrKbS3/Picsart-25-06-23-17-02-33-569.jpg",
+          "https://i.postimg.cc/v8S8y95G/Picsart-25-06-23-17-01-41-385.jpg",
+          "https://i.postimg.cc/DyXhKN2c/Picsart-25-06-23-17-00-44-838.jpg",
+          "https://i.postimg.cc/wvMK4ffL/Picsart-25-06-23-16-59-55-325.jpg",
+          "https://i.postimg.cc/nhxhSxvm/Picsart-25-06-23-16-58-53-503.jpg",
+          "https://i.postimg.cc/3x33CBTC/Picsart-25-06-23-16-57-50-686.jpg",
+        ],
+        description: "تيشرت بستايل الشارع الجريء، مع شعار NEEX بحروف كبيرة وواضحة تمنحك مظهر قوي ولافت. اللون الأصفر المشرق يضيف طاقة وجرأة لإطلالتك. مصنوع من قطن ناعم ومتين، مثالي للارتداء اليومي أو المناسبات الكاجوال. متوفر بعدة ألوان ومقاسات.",
+        description_en: "A bold streetwear-inspired t-shirt featuring the NEEX logo in large, standout letters. The bright yellow color adds energy and confidence to your look. Made from soft, durable cotton—perfect for everyday wear or casual occasions. Available in various colors and sizes.",
+        sizes: ["M", "L", "XL", "XXL"]
+      },
+      {
+        id: 4,
+        title: "NEEX REAPER",
+        title_en: "NEEX REAPER",
+        price: 200,
+        image: "https://i.postimg.cc/Kz5YcK7x/IMG-20250624-191049.jpg",
+        images: [ 
+          "https://i.postimg.cc/Kz5YcK7x/IMG-20250624-191049.jpg",
+          "https://i.postimg.cc/6QgP7z0h/IMG-20250624-191013.jpg",
+          "https://i.postimg.cc/qq0jnFC2/Picsart-25-06-17-13-27-54-341.jpg",
+          "https://i.postimg.cc/bwMgLrty/Picsart-25-06-17-13-26-03-480.jpg",                                            
+          "https://i.postimg.cc/JnRkQCP7/Picsart-25-06-17-13-22-06-892.jpg",
+          "https://i.postimg.cc/fyrSZtZk/Picsart-25-06-17-13-20-06-005.jpg",
+        ],
+        description: "اكتشف جرأة التصميم مع هذا التيشرت الفريد من NEEX. جمجمة ذائبة بألوان صفراء    تمنحك مظهراً لا يُنسى، وتعبّر عن شخصية متمرّدة وعاشقة للفن والشارع. التيشرت مصنوع من قطن ناعم ومتين، مناسب للإطلالات اليومية ولمن يبحث عن التميز والاختلاف. متوفر بعدة مقاسات",
+        description_en: "Unleash bold energy with this standout NEEX T-shirt. Featuring a melting yellow  , it captures the spirit of rebellion and street art. Made from soft and durable cotton, it's the perfect piece for daily wear and for those who dare to be different. Available in multiple sizes.",
+        sizes: ["M", "L", "XL", "XXL"]
+      },
+      {
+        id: 5,
+        title: "NEEX ECHO",
+        title_en: "NEEX ECHO",
+        price: 180,
+        image: "https://i.postimg.cc/BQ4zhZhH/Picsart-25-06-23-15-44-41-944.jpg",
+        images: [
+          "https://i.postimg.cc/BQ4zhZhH/Picsart-25-06-23-15-44-41-944.jpg",
+          "https://i.postimg.cc/SRqgtVGk/Picsart-25-06-23-15-43-39-029.jpg",
+          "https://i.postimg.cc/SQvXdjQt/Picsart-25-06-23-15-42-49-242.jpg",
+          "https://i.postimg.cc/8ztsFCYH/Picsart-25-06-23-15-41-53-083.jpg",
+          "https://i.postimg.cc/Gm5dwTNZ/Picsart-25-06-23-15-40-12-418.jpg",
+          "https://i.postimg.cc/ZRLQm1nC/Picsart-25-06-23-12-45-45-886.jpg",
+        ],
+        description: "تيشرت NEEX ECHO يجمع بين البساطة والجرأة بتصميم يكرر شعار NEEX بشكل إيقاعي عصري. الألوان المتعددة تضيف لمسة حيوية، والخامة القطنية الخفيفة تمنحك راحة مثالية خلال الصيف أو في خروجاتك اليومية. إذا كنت من عشاق التميز والبساطة الجذابة، فـ ECHO هو اختيارك. مقاس واحد يناسب الجميع",
+        description_en: "The NEEX ECHO T-shirt brings together simplicity and boldness with a rhythmic repetition of the NEEX logo. Available in multiple vibrant colors, its lightweight cotton fabric ensures ultimate comfort for summer days or casual outings. If you're into standout minimalism — ECHO is made for you. One size fits all",
+        sizes: ["M", "L", "XL"],
+        badge: "best_seller"
+      },
+      {
+        id: 6,
+        title: "NEEX ECHO // BLACKOUT",
+        title_en: "NEEX ECHO // BLACKOUT",
+        price: 180,
+        image: "https://i.postimg.cc/VLD9Bzr7/Picsart-25-06-21-09-50-26-576.jpg",
+        images: [
+          "https://i.postimg.cc/VLD9Bzr7/Picsart-25-06-21-09-50-26-576.jpg",
+          "https://i.postimg.cc/T18xs8KF/Picsart-25-06-22-15-51-10-810.jpg",
+          "https://i.postimg.cc/W3LfLs7G/Picsart-25-06-22-15-49-49-843.jpg",
+          "https://i.postimg.cc/JzsTss63/Picsart-25-06-22-15-48-38-644.jpg",
+          "https://i.postimg.cc/gkJs7wW9/Picsart-25-06-21-09-49-36-668.jpg",         
+        ],
+        description: "نسخة سوداء أنيقة من تيشرت NEEX ECHO، تجمع بين التكرار الجريء للشعار ولون أسود يوحي بالقوة والغموض. تصميم عصري ومميز لعشاق الإطلالة الجادة والمتمردة. مصنوع من قطن مريح وخفيف، مثالي للارتداء اليومي أو للخروجات الليلية بأسلوب عصري. متوفر بمقاسات مختلفة.",
+        description_en: "The boldest version of NEEX ECHO yet. This BLACKOUT edition brings the iconic repeated logo to life in a sleek, all-black design — where silence meets power. Perfect for those who prefer a darker, edgier vibe. Crafted from soft, breathable cotton for everyday comfort. Available in multiple sizes.",
+        sizes: ["M", "L", "XL", "XXL"],
+        badge: "new"
+      },
+      {
+        id: 7,
+        title: "NEEX VENOM SMILE",
+        title_en: "NEEX VENOM SMILE",
+        price: 200,
+        image: "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
+        images: [
+          "https://i.postimg.cc/CM9WJyqg/Picsart-25-06-23-20-33-30-305.jpg",
+          "https://i.postimg.cc/zBCzCnJs/Picsart-25-06-17-13-14-21-694.jpg",
+          "https://i.postimg.cc/SxRxB2r9/Picsart-25-06-17-13-16-08-473.jpg",
+          "https://i.postimg.cc/HnNjgK5b/Picsart-25-06-17-13-09-00-801-1.jpg",
+          "https://i.postimg.cc/CMRqvHbb/Picsart-25-06-17-13-11-30-521.jpg",
+        ],
+        description: "قميص قطني ناعم بتصميم فني جريء يجمع بين الابتسامة والجمجمة، مثالي لعشاق التميز وستايل الشارع.",
+        description_en: "Soft cotton tee with a bold graphic mixing a smiley and skull — perfect for streetwear lovers and those who stand out.",
+        sizes: ["M", "L", "XL", "XXL"]
+      },
+      {
+        id: 8,
+        title: "NEEX TOXIC HEAT",
+        title_en: "NEEX TOXIC HEAT",
+        price: 200,
+        image: "https://i.postimg.cc/P5tJcQ1K/IMG-20250624-190813.jpg",
+        images: [    
+          "https://i.postimg.cc/P5tJcQ1K/IMG-20250624-190813.jpg",
+          "https://i.postimg.cc/rwQsLRJT/IMG-20250624-190741.jpg",
+          "https://i.postimg.cc/PJWfVCxB/Picsart-25-06-16-20-27-02-186.jpg",
+          "https://i.postimg.cc/Kv5vn3CT/Picsart-25-06-16-20-27-46-123.jpg",
+          "https://i.postimg.cc/HksW3sCh/Picsart-25-06-16-20-23-37-397.jpg",
+          "https://i.postimg.cc/QC3h7jbS/Picsart-25-06-16-20-19-45-121.jpg",
+        ],
+        description: "قميص قطني رائع، مع لوحة فنية عبارة عن لهب ذائب يحمل توقيع NEEX.مثالي لكل من يعشق التميز والانفجار الهادئ للأناقة",
+        description_en: "A premium cotton tee featuring a stunning artwork — melting flames signed by NEEX.Perfect for those who love bold style with quiet intensity.",
+        sizes: ["M", "L", "XL", "XXL"]
+      },
+      {
+        id: 9,
+        title: "FROST KING",
+        title_en: "NEEX FROST KING",
+        price: 200,
+        image: "https://i.postimg.cc/hGWXgBLK/IMG-20250624-224239.jpg",
+        images: [
+          "https://i.postimg.cc/hGWXgBLK/IMG-20250624-224239.jpg",
+          "https://i.postimg.cc/3xpwtcPV/Picsart-25-06-14-12-13-21-942.jpg",
+          "https://i.postimg.cc/ZRfY9tdB/Picsart-25-06-14-12-14-48-228.jpg",
+          "https://i.postimg.cc/vmYd52MW/Picsart-25-06-14-12-15-51-074.jpg",
+          "https://i.postimg.cc/HnXp6JN5/Picsart-25-06-14-12-16-42-438.jpg",  
+          "https://i.postimg.cc/gjqCw35M/Picsart-25-06-14-12-52-15-272.jpg",
+          "https://i.postimg.cc/NfK8jQHX/Picsart-25-06-14-12-43-50-681.jpg",
+        ],
+        description: "قميص قطني أسود، عليه سانتا بحلّة محاربة وتوقيع NEEX.مش بهجة... هادي هيبة شتوية، لناس ما كيركعوش للروتي",
+        description_en: "Black cotton tee with a warrior-style Santa and NEEX signature.Not just festive — it's winter dominance for those who don't kneel to routine.",
+        sizes: ["M", "L", "XL", "XXL"],
+        badge: "new"
+      },
+      {
+        id: 10,
+        title: "NEEX FROST",
+        title_en: "NEEX FROST",
+        price: 180,
+        image: "https://i.postimg.cc/mDhJwtDw/Picsart-25-06-23-15-52-03-996.jpg",
+        images: [
+          "https://i.postimg.cc/mDhJwtDw/Picsart-25-06-23-15-52-03-996.jpg",
+          "https://i.postimg.cc/V63GWg2f/Picsart-25-06-23-15-51-10-248.jpg",
+          "https://i.postimg.cc/CMq6xyfz/Picsart-25-06-23-15-48-31-018.jpg",
+          "https://i.postimg.cc/HsnTVkdT/Picsart-25-06-23-15-47-36-481.jpg",
+          "https://i.postimg.cc/GpFCZBJx/Picsart-25-06-23-15-46-30-594.jpg",
+        ],
+        description: "قميص قطني ناصع، بتوقيع NEEX الجليدي.تصميم نقي وبارد، كيحمل هيبة الصمت وهدوء الواثقين",
+        description_en: "Crisp cotton tee with an icy NEEX signature.Clean, bold design — calm power for the confident.",
+        sizes: ["M", "L", "XL", "XXL"]
+      },
+      {
+        id: 11,
+        title: "NEEX SIGNAL",
+        title_en: "NEEX SIGNAL",
+        price: 180,
+        image: "https://i.postimg.cc/fyryJ3P0/IMG-20250624-191211.jpg",
+        images: [
+          "https://i.postimg.cc/fyryJ3P0/IMG-20250624-191211.jpg",
+          "https://i.postimg.cc/DwdhNJcd/IMG-20250624-191236.jpg",
+          "https://i.postimg.cc/Nf0cch3Z/Picsart-25-06-25-21-21-28-563.jpg",
+          "https://i.postimg.cc/28gXXPrQ/Picsart-25-06-25-21-20-46-015.jpg",
+          "https://i.postimg.cc/Hn9X48Yv/Picsart-25-06-25-21-19-40-246.jpg",
+          "https://i.postimg.cc/SKY91vQM/Picsart-25-06-25-21-18-57-195.jpg",
+        ],
+        description: "قميص قطني أنيق متوفر بألوان زاهية، مزين بشعار NEEX البارز بحال سينيال وسط الزحام، كيشعل أناقة ويأمر بالانتباه.",
+        description_en: "A stylish cotton tee available in vibrant colors, featuring a bold NEEX logo – like a signal in the crowd, it radiates confidence and demands attention",
+        sizes: ["M", "L", "XL", "XXL"],
+        badge: "new"
+      },
+      {
+        id: 12,
+        title: "NEEX VISION",
+        title_en: "NEEX VISION",
+        price: 180,
+        image: "https://i.postimg.cc/L6Vv0LWV/Picsart-25-06-25-12-33-13-698.jpg",
+        images: [ 
+          "https://i.postimg.cc/L6Vv0LWV/Picsart-25-06-25-12-33-13-698.jpg",
+          "https://i.postimg.cc/zf4kRjLq/Picsart-25-06-25-12-32-26-217.jpg",
+          "https://i.postimg.cc/zvrSxGSM/Picsart-25-06-25-12-31-39-940.jpg",
+          "https://i.postimg.cc/7P3NfSqy/Picsart-25-06-25-12-22-24-316.jpg",
+          "https://i.postimg.cc/8PwBbDFK/Picsart-25-06-25-12-17-56-146.jpg",
+        ],
+        description: "قميص قطني فاخر بتصميم عصري وشعار NEEX ثلاثي الأبعاد، متوفر بألوان متعددة تناسب كل الأذواق.",
+        description_en: "Premium cotton t-shirt with a bold 3D NEEX logo — available in multiple colors to match every style",
+        sizes: ["M", "L", "XL", "XXL"],
+        badge: "new"
+      },
+      {
+        id: 13,
+        title: "TOO OLD",
+        title_en: "TOO OLD",
+        price: 200,
+        image: "https://i.postimg.cc/CLddWVP6/Picsart-25-06-25-12-41-28-538.jpg",
+        images: [ 
+          "https://i.postimg.cc/CLddWVP6/Picsart-25-06-25-12-41-28-538.jpg",
+          "https://i.postimg.cc/BvCqjh7K/Picsart-25-06-25-12-36-40-294.jpg",
+          "https://i.postimg.cc/Z5tZVk1N/Picsart-25-06-25-12-50-28-774.jpg",
+          "https://i.postimg.cc/t4jJ7VR8/Picsart-25-06-25-12-51-34-147.jpg",
+          "https://i.postimg.cc/GmLRZPm3/Picsart-25-06-25-12-37-40-792.jpg",
+        ],
+        description: "قميص قطني بجودة عالية، مزين بعبارة تعبر عن القوة والموقف. تصميم عصري يلفت الانتباه ويعبّر عن شخصية لا تقبل التفاهة.",
+        description_en: "High-quality cotton tee with a bold phrase that speaks attitude. A modern design that turns heads and tells the world you've had enough.",
+        sizes: ["M", "L", "XL", "XXL"],
+        badge: "best_seller"
+      },
+    ];
 
     // ترجمة النصوص
     const translations = {
@@ -1720,16 +1839,13 @@
         contact: "اتصل بنا",
         hero_subtitle: "اكتشف تشكيلاتنا التي تجمع بين الأناقة والجودة",
         browse_products: "تصفح المنتجات",
-        our_products: "تشكيلاتنا",
-        summer_collection: "تيشرتات صيفية",
-        winter_collection: "هوديات شتوية",
+        our_products: "تشكيلات تيشرتات NEEX",
         copyright: "© 2025 NEEX Store. جميع الحقوق محفوظة",
         add_to_cart: "أضف للسلة",
         added: "تمت الإضافة",
         view_details: "التفاصيل",
         new: "جديد",
         best_seller: "الأكثر مبيعاً",
-        winter: "شتاء",
         about_us: "من نحن",
         our_team: "فريقنا",
         designer: "مصمم أزياء",
@@ -1757,16 +1873,13 @@
         contact: "Contactez-nous",
         hero_subtitle: "Découvrez nos collections alliant élégance et qualité",
         browse_products: "Parcourir les produits",
-        our_products: "Nos collections",
-        summer_collection: "T-shirts d'été",
-        winter_collection: "Sweats à capuche d'hiver",
+        our_products: "Collections de T-shirts NEEX",
         copyright: "© 2025 NEEX Store. Tous droits réservés",
         add_to_cart: "Ajouter au panier",
         added: "Ajouté",
         view_details: "Détails",
         new: "Nouveau",
         best_seller: "Meilleure vente",
-        winter: "Hiver",
         about_us: "À propos de nous",
         our_team: "Notre équipe",
         designer: "Designer de mode",
@@ -1794,16 +1907,13 @@
         contact: "Contact Us",
         hero_subtitle: "Discover our collections combining elegance and quality",
         browse_products: "Browse Products",
-        our_products: "Our Collections",
-        summer_collection: "Summer T-Shirts",
-        winter_collection: "Winter Hoodies",
+        our_products: "NEEX T-Shirts Collection",
         copyright: "© 2025 NEEX Store. All Rights Reserved",
         add_to_cart: "Add to Cart",
         added: "Added",
         view_details: "Details",
         new: "New",
         best_seller: "Best Seller",
-        winter: "Winter",
         about_us: "About Us",
         our_team: "Our Team",
         designer: "Fashion Designer",
@@ -1827,8 +1937,6 @@
     };
 
     // عناصر DOM
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const collections = document.querySelectorAll('.collection');
     const cartCount = document.querySelector('.cart-count');
     const cartIcon = document.querySelector('.cart-icon');
     const langButtons = document.querySelectorAll('.lang-btn');
@@ -1846,6 +1954,8 @@
     const whatsappCheckoutBtn = document.getElementById('whatsapp-checkout');
     const quoteText = document.querySelector('.quote-text');
     const quoteAuthor = document.querySelector('.quote-author');
+    const loader = document.querySelector('.loader');
+    const productsGrid = document.querySelector('.products-grid');
     
     // حالة المتجر
     let currentLanguage = 'ar';
@@ -1853,130 +1963,115 @@
     
     // تهيئة المتجر
     function initStore() {
-      renderProducts();
-      updateTranslations();
-      updateCartCount();
-      renderCartItems();
+      // Show loader while initializing
+      loader.classList.add('active');
       
-      // إضافة أحداث
-      tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          tabButtons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-          
-          collections.forEach(collection => collection.classList.remove('active'));
-          
-          const collectionId = button.dataset.collection + '-collection';
-          document.getElementById(collectionId).classList.add('active');
+      setTimeout(() => {
+        renderProducts();
+        updateTranslations();
+        updateCartCount();
+        renderCartItems();
+        loader.classList.remove('active');
+        
+        // أحداث تغيير اللغة
+        langButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            currentLanguage = button.dataset.lang;
+            
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            updateTranslations();
+            renderProducts();
+            renderCartItems();
+          });
         });
-      });
-      
-      // أحداث تغيير اللغة
-      langButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          currentLanguage = button.dataset.lang;
-          
-          langButtons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-          
-          updateTranslations();
-          renderProducts();
-          renderCartItems();
+        
+        // أحداث التنقل بين الصفحات
+        navLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            showSection(link.dataset.section);
+            
+            if (mobileMenu.classList.contains('active')) {
+              mobileMenu.classList.remove('active');
+              overlay.classList.remove('active');
+            }
+          });
         });
-      });
-      
-      // أحداث التنقل بين الصفحات
-      navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          showSection(link.dataset.section);
-          
-          if (mobileMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
+        
+        // أحداث القائمة المتنقلة
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.add('active');
+          overlay.classList.add('active');
+        });
+        
+        closeMobileMenu.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+        
+        // أحداث سلة التسوق
+        cartIcon.addEventListener('click', () => {
+          cartSidebar.classList.add('active');
+          overlay.classList.add('active');
+        });
+        
+        closeCart.addEventListener('click', () => {
+          cartSidebar.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+        
+        // أحداث المودال
+        closeModal.addEventListener('click', () => {
+          productModal.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+        
+        // أحداث الطبقة الشفافة
+        overlay.addEventListener('click', () => {
+          cartSidebar.classList.remove('active');
+          productModal.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+        
+        // حدث زر إتمام الشراء عبر واتساب
+        whatsappCheckoutBtn.addEventListener('click', () => {
+          if (cartItems.length === 0) {
+            alert(translations[currentLanguage].empty_cart);
+            return;
           }
+          
+          let message = `${translations[currentLanguage].shopping_cart}:\n\n`;
+          
+          cartItems.forEach(item => {
+            message += `- ${item[`title_${currentLanguage}`] || item.title} (${item.quantity} × ${item.price} ${translations[currentLanguage].currency})\n`;
+          });
+          
+          message += `\n${translations[currentLanguage].total}: ${calculateCartTotal()} ${translations[currentLanguage].currency}\n\n`;
+          message += "NEEX Store";
+          
+          const phoneNumber = "+212782738492";
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+          
+          window.open(whatsappUrl, '_blank');
         });
-      });
-      
-      // أحداث القائمة المتنقلة
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.add('active');
-        overlay.classList.add('active');
-      });
-      
-      closeMobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        overlay.classList.remove('active');
-      });
-      
-      // أحداث سلة التسوق
-      cartIcon.addEventListener('click', () => {
-        cartSidebar.classList.add('active');
-        overlay.classList.add('active');
-      });
-      
-      closeCart.addEventListener('click', () => {
-        cartSidebar.classList.remove('active');
-        overlay.classList.remove('active');
-      });
-      
-      // أحداث المودال
-      closeModal.addEventListener('click', () => {
-        productModal.classList.remove('active');
-        overlay.classList.remove('active');
-      });
-      
-      // أحداث الطبقة الشفافة
-      overlay.addEventListener('click', () => {
-        cartSidebar.classList.remove('active');
-        productModal.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        overlay.classList.remove('active');
-      });
-      
-      // حدث زر إتمام الشراء عبر واتساب
-      whatsappCheckoutBtn.addEventListener('click', () => {
-        if (cartItems.length === 0) {
-          alert(translations[currentLanguage].empty_cart);
-          return;
-        }
-        
-        let message = `${translations[currentLanguage].shopping_cart}:\n\n`;
-        
-        cartItems.forEach(item => {
-          message += `- ${item[`title_${currentLanguage}`] || item.title} (${item.quantity} × ${item.price} ${translations[currentLanguage].currency})\n`;
-        });
-        
-        message += `\n${translations[currentLanguage].total}: ${calculateCartTotal()} ${translations[currentLanguage].currency}\n\n`;
-        message += "NEEX Store";
-        
-        const phoneNumber = "+212782738492";
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        
-        window.open(whatsappUrl, '_blank');
-      });
+      }, 1000);
     }
     
     // عرض المنتجات
     function renderProducts() {
-      const summerGrid = document.querySelector('#summer-collection .products-grid');
-      summerGrid.innerHTML = '';
+      productsGrid.innerHTML = '';
       
-      products.summer.forEach(product => {
-        summerGrid.appendChild(createProductCard(product));
-      });
-      
-      const winterGrid = document.querySelector('#winter-collection .products-grid');
-      winterGrid.innerHTML = '';
-      
-      products.winter.forEach(product => {
-        winterGrid.appendChild(createProductCard(product));
+      products.forEach(product => {
+        productsGrid.appendChild(createProductCard(product));
       });
       
       document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', function() {
           const productId = parseInt(this.dataset.id);
-          const product = [...products.summer, ...products.winter].find(p => p.id === productId);
+          const product = products.find(p => p.id === productId);
           
           addToCart(product);
           
@@ -1999,7 +2094,7 @@
       document.querySelectorAll('.view-details').forEach(button => {
         button.addEventListener('click', function() {
           const productId = parseInt(this.dataset.id);
-          const product = [...products.summer, ...products.winter].find(p => p.id === productId);
+          const product = products.find(p => p.id === productId);
           showProductDetails(product);
         });
       });
@@ -2007,16 +2102,15 @@
     
     // إنشاء بطاقة منتج
     function createProductCard(product) {
-      const isWinter = products.winter.some(p => p.id === product.id);
       const badgeText = product.badge ? 
         (translations[currentLanguage][product.badge] || product.badge) : '';
       
       const card = document.createElement('div');
       card.className = 'product-card';
       card.innerHTML = `
-        ${badgeText ? `<div class="product-badge ${isWinter ? 'winter-badge' : ''}">${badgeText}</div>` : ''}
-        <div class="product-img">
-          <img src="${product.image}" alt="${product[`title_${currentLanguage}`] || product.title}" loading="lazy">
+        ${badgeText ? `<div class="product-badge ${product.badge}">${badgeText}</div>` : ''}
+        <div class="product-img-container">
+          <img src="${product.image}" alt="${product[`title_${currentLanguage}`] || product.title}" class="product-img" loading="lazy">
         </div>
         <div class="product-info">
           <h3 class="product-title">${product[`title_${currentLanguage}`] || product.title}</h3>
